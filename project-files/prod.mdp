@@ -1,0 +1,43 @@
+define                  = -DTRES -DTAILRES=4000.0
+integrator              = md
+dt                      = 0.002
+nsteps                  = 3400000
+nstxtcout               = 10000
+nstvout                 = 10000
+nstfout                 = 10000
+nstcalcenergy           = 100
+nstenergy               = 10000
+nstlog                  = 10000
+;
+cutoff-scheme           = Verlet
+nstlist                 = 20
+rlist                   = 1.2
+coulombtype             = pme
+rcoulomb                = 1.2
+vdwtype                 = Cut-off
+vdw-modifier            = Force-switch
+rvdw_switch             = 1.0
+rvdw                    = 1.2
+;
+tcoupl                  = Nose-Hoover
+tc_grps                 = System
+tau_t                   = 1.0
+ref_t                   = 310
+;
+pcoupl                  = Parrinello-Rahman
+pcoupltype              = isotropic
+tau_p                   = 5.0
+compressibility         = 4.5e-5
+ref_p                   = 1.0
+;
+constraints             = h-bonds
+constraint_algorithm    = LINCS
+continuation            = yes
+;
+nstcomm                 = 100
+comm_mode               = linear
+comm_grps               = System
+;
+refcoord_scaling        = com
+gen-vel                 = no
+pbc                     = xyz  
