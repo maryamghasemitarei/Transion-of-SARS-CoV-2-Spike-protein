@@ -1,3 +1,0 @@
-This folder containes:
-1- the files contains the bonded and non-bonded parameters of atoms in charmm36 forcefield.
-2- the file named "PROA" contains the parameters for each chain (A, B, and C) of the SARS-CoV-2 spike protein in its native form.
