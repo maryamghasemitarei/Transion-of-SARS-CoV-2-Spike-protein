@@ -7,4 +7,4 @@ This folder containes:
 6- the folder named "TMD-native" contains all input files of targeted MD simulation of native system from down to up and up to down.
 7- the folder named "TMD-oxidized" contains all input files of targeted MD simulation of oxidized system from down to up and up to down.
 
-Any sub-folder has its own README file.
+Any sub-folder and zipped files have their own README file.
