@@ -1,0 +1,26 @@
+# set up two variables for Phi and Psi dihedral angles
+# these variables will be just monitored to see what happens
+# creates a CV that measures the RMSD from a reference pdb structure
+# the RMSD is measured after OPTIMAL alignment with the target structure
+
+
+rmsda: RMSD REFERENCE=chain_A.pdb TYPE=OPTIMAL
+rmsdb: RMSD REFERENCE=chain_B.pdb TYPE=OPTIMAL
+rmsdc: RMSD REFERENCE=chain_C.pdb TYPE=OPTIMAL
+rmsdg: RMSD REFERENCE=gly.pdb TYPE=OPTIMAL NOPBC
+rmsdpr: RMSD REFERENCE=protein.pdb TYPE=OPTIMAL NOPBC
+rmsdt: RMSD REFERENCE=final.pdb TYPE=OPTIMAL NOPBC
+
+# the movingrestraint
+restraint: ...
+        MOVINGRESTRAINT
+        ARG=rmsdpr
+        AT0=0.05 STEP0=0     KAPPA0=0
+	AT1=0.05 STEP1=5000000      KAPPA1=80000
+
+    
+
+
+...
+# monitor the two variables and various restraint outputs
+PRINT STRIDE=1000 ARG=* FILE=COLVAR2
