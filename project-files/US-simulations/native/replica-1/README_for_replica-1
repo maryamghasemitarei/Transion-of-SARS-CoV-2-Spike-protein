@@ -1,0 +1,11 @@
+Overview
+The file replica-1.zip contains important simulation data for the project. Due to the file size being larger than GitHub's 25MB file upload limit, the file is either split into smaller parts or stored externally. Follow the instructions below to download and extract the contents.
+
+Download all parts of the file (e.g., replica-1.zip_01, replica-1.zip_02, etc.).
+Use the cat command to combine the parts:
+
+cat replica-1.zip.* > replica-1.zip
+
+After reassembling the file, extract it using:
+
+unzip replica-1.zip
